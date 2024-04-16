@@ -1,3 +1,7 @@
+div {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
@@ -35,19 +39,17 @@ body {
     border: none;
     border-radius: 5px;
     position: absolute;
-    left: 0;
-    right: 0;
     margin: auto;
     width: 150px;
 }
 
 .main-box {
     background-color: bisque;
-    width: 60%;
+    width: 80%;
+    max-width: 600px;
     padding: 10px;
-    position: absolute;
-    top: 450px;
-    left: 0;
-    right: 0;
+    position: relative;
+    top: 200px;
     margin: auto;
+    box-sizing: border-box;
 }
