@@ -4,6 +4,7 @@ div {
 
 body {
     margin: 0;
+    height: 2000px;
 }
 
 .main-background {
@@ -52,4 +53,16 @@ body {
     top: 200px;
     margin: auto;
     box-sizing: border-box;
+}
+
+form {
+    position: relative;
+    top: 220px;
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
