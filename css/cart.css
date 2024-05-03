@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 80%;
+    height: 800px;
+    margin: 30px auto;
+    padding: 50px;
+    max-width: 850px;
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+    max-width: 850px;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    border: 1px solid lightblue;
+}
+
+.cart-table th:nth-child(2) {
+    width: 120px;
+}
+
+img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.footer {
+    text-align: right;
+}
