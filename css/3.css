@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+label {
+    user-select: none;
+}
+
+input[type=email], input[type=text]{
+    outline: none;
+    border-width: 0 0 1px;
+    height: 30px;
+    padding: 0 7px;
+}
+
+.message {
+    height: 200px;
+}
+
+textarea {
+    box-sizing: border-box;
+    height: 160px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 7px;
+}
+
+.email-input, .name-input {
+    margin-top: 25px;
+}
+
+.check {
+    width: 50%;
+    height: 30px;
+    margin-top: 15px;
+    float: left;
+}
+.send {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    margin-top: 10px;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d350;
+    color: white;
+}
+.footer {
+    clear: both;
+}
+.wrapper {
+    width: 80%;
+    height: 550px;
+    max-width: 650px;
+    margin: auto;
+    padding: 60px 120px;
+    background-color: dimgray;
+}
+
+.content-box {
+    padding: 20px;
+    height: 450px;
+    background-color: white;
+
+}
