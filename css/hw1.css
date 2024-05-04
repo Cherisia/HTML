@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-box {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-box {
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
