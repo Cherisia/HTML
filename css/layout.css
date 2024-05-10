@@ -33,7 +33,8 @@ div {
 }
 
 .main-section img {
-    width: 300px;
+    width: 40%;
+    min-width: 300px;
     margin-top: 45px;
 }
 
@@ -176,4 +177,14 @@ div {
     border: 1px solid;
     border-radius: 50px;
     font-size: 11px;
+}
+@media screen and (max-width : 1200px) {
+}
+
+@media screen and (max-width : 768px) {
+    .main-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
