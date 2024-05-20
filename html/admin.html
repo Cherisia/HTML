@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+<style>
+    div input{
+        box-sizing: border-box;
+    }
+    .grid-container {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 40px 2fr 1fr;
+        grid-template-rows: 60px 250px 800px;
+        grid-template-areas:
+        "sidebar nav nav"
+        "sidebar dashboard dashboard"
+        "sidebar chart task"
+        ;
+        margin: auto;
+        background-color: #fafafa;
+
+    }
+    .grid-nav {
+        display: flex;
+        grid-area: nav;
+        background-color: white;
+        padding: 0.75rem;
+    }
+    .grid-nav input[type=text] {
+        width: 10rem;
+        height: 100%;
+        padding-left: 0.5rem;
+        font-size: 0.85rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px solid grey;
+        outline: none;
+        transition: width 1s;
+    }
+    .grid-nav input[type=text]:focus {
+        width: 15rem;
+    }
+    .grid-nav button {
+        width: 2.5rem;
+        height: 100%;
+        background-color: black;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+    }
+    .search-area {
+        flex-grow: 4;
+        display: flex;
+    }
+    .icon-area {
+        flex-grow: 1;
+        display: flex;
+        font-size: 1.25rem;
+        align-items: center;
+    }
+    .icon-area i {
+        margin-right: 1rem;
+    }
+    .user-area {
+        flex-grow: 0.5;
+        display: flex;
+
+    }
+    .grid-sidebar {
+        grid-area: sidebar;
+        background-color: #494cb5;
+        color: white;
+        text-align: center;
+    }
+    .grid-sidebar div {
+        margin-top: 30px;
+    }
+    .grid-dashboard {
+        grid-area: dashboard;
+    }
+    .grid-chart {
+        grid-area: chart;
+    }
+    .grid-task {
+        grid-area: task;
+    }
+</style>
+<body>
+<div class="grid-container">
+    <nav class="grid-nav">
+        <div class="search-area">
+            <input type="text" placeholder="Search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="icon-area">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="user-area">
+            HeeChan Yoon
+        </div>
+
+    </nav>
+    <div class="grid-sidebar">
+        <div>
+            <i class="fa-solid fa-house-chimney"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-headphones"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-flag"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-pie"></i>
+        </div>
+    </div>
+    <div class="grid-dashboard"></div>
+    <div class="grid-chart"></div>
+    <div class="grid-task"></div>
+</div>
+</body>
+</html>
