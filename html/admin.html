@@ -13,7 +13,7 @@
         box-sizing: border-box;
     }
     .grid-container {
-        max-width: 1000px;
+        max-width: 1200px;
         display: grid;
         grid-template-columns: 40px 2fr 1fr;
         grid-template-rows: 60px 250px 800px;
@@ -31,6 +31,7 @@
         grid-area: nav;
         background-color: white;
         padding: 0.75rem;
+        border-bottom: 3px solid #eeeeee;
     }
     .grid-nav input[type=text] {
         width: 10rem;
@@ -56,22 +57,42 @@
         cursor: pointer;
     }
     .search-area {
-        flex-grow: 4;
         display: flex;
+        flex-basis: 60%;
     }
     .icon-area {
-        flex-grow: 1;
         display: flex;
-        font-size: 1.25rem;
+        flex-basis: 25%;
+        font-size: 1rem;
         align-items: center;
+        justify-content: right;
+        color: grey;
     }
     .icon-area i {
-        margin-right: 1rem;
+        position: relative;
+        margin-right: 3rem;
+    }
+    .icon-area i div {
+        position: absolute;
+        display: flex;
+        width: 1rem;
+        height: 1.1rem;
+        border-radius: 2px;
+        top: -80%;
+        left: 50%;
+        background-color: orangered;
+        color: white;
+        font-size: 0.5rem;
+        align-items: center;
+        justify-content: center;
     }
     .user-area {
-        flex-grow: 0.5;
         display: flex;
-
+        flex-basis: 15%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        color: grey;
     }
     .grid-sidebar {
         grid-area: sidebar;
@@ -84,6 +105,51 @@
     }
     .grid-dashboard {
         grid-area: dashboard;
+    }
+    .grid-dashboard h1 {
+        margin: 2rem 0 1rem 1rem;
+    }
+    .card-section {
+        display: flex;
+    }
+    .card {
+        display: flex;
+        flex-basis: 25%;
+        height: 8rem;
+        background-color: white;
+        margin: 1rem;
+        border-radius: 5px;
+        border: 2px solid #eeeeee;
+    }
+    .card-text {
+        margin: auto 1rem;
+        flex-basis: 60%;
+
+    }
+    .card-text p {
+        color: #464646;
+        font-weight: 500;
+        letter-spacing: -1px;
+    }
+    .card-icon {
+        display: flex;
+        flex-basis: 40%;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        color: grey;
+    }
+    .monthly {
+        border-left: 5px solid #8bcae4;
+    }
+    .annual {
+        border-left: 5px solid #3ec375;
+    }
+    .tasks {
+        border-left: 5px solid #4e4f8e;
+    }
+    .requests {
+        border-left: 5px solid #f7cb73;
     }
     .grid-chart {
         grid-area: chart;
@@ -102,8 +168,12 @@
             </button>
         </div>
         <div class="icon-area">
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-bell">
+                <div>5</div>
+            </i>
+            <i class="fa-solid fa-envelope">
+                <div>9</div>
+            </i>
         </div>
         <div class="user-area">
             HeeChan Yoon
@@ -124,7 +194,47 @@
             <i class="fa-solid fa-chart-pie"></i>
         </div>
     </div>
-    <div class="grid-dashboard"></div>
+    <div class="grid-dashboard">
+        <h1>Dashboard</h1>
+        <div class="card-section">
+            <div class="card monthly">
+                <div class="card-text">
+                    <p>Earnings (Monthly)</p>
+                    <h3>$400,000</h3>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+            </div>
+            <div class="card annual">
+                <div class="card-text">
+                    <p>Earnings (Monthly)</p>
+                    <h3>$400,000</h3>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+            </div>
+            <div class="card tasks">
+                <div class="card-text">
+                    <p>Earnings (Monthly)</p>
+                    <h3>$400,000</h3>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+            </div>
+            <div class="card requests">
+                <div class="card-text">
+                    <p>Earnings (Monthly)</p>
+                    <h3>$400,000</h3>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="grid-chart"></div>
     <div class="grid-task"></div>
 </div>
